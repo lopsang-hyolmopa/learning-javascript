@@ -1,7 +1,9 @@
 // JS is dynamically typed language because we don't assign type of variable during variable declaration.
 
 
-// Primitive - call by value (When value is copied, you don't get the refrence of memory but the copy of the value)
+// Primitive 
+// - call by value (When value is copied, you don't get the refrence of memory but the copy of the value)
+// - does not make changes on actual value
 
 // 7 types : String, Number, Boolean, null, undefined, Symbol, BigInt
 
@@ -21,7 +23,9 @@ const bigNumber = 234920384028508238502835n // BigInt
 
 
 
-// Reference  (Non primitive) - (value whose reference is allocated in the memory)
+// Reference  (Non primitive) 
+// - (value whose reference is allocated in the memory)
+// - does make changes on original value.
 
 // Array, Objects, Functions
 
@@ -53,3 +57,26 @@ console.log(typeof id); // typeof returns types of data
 10. Function - function
 
 */
+
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myYoutubeName = "lopeyman"
+
+let anotherName = myYoutubeName // Stack - gets copy of value so does not make original value
+anotherName = "lopsanglama"
+
+console.log(myYoutubeName); // lopeyman
+console.log(anotherName); // lopsanglama
+
+let userOne = {
+    email: "user@test.com",
+    age: 22
+}
+
+let userTwo = userOne // heap - gets referance of value. So, make changes on original value
+userTwo.email = "user@google.com"
+
+console.log(userOne.email); // user@google.com instead of "user@test.com"
+console.log(userTwo.email); // user@google.com
+
