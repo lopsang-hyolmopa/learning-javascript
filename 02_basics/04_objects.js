@@ -70,3 +70,33 @@ const users = [
         email: "rajesh@test.com"
     }
 ]
+
+// Destructuring object
+const course = {
+    coureName: 'js in hindi',
+    price: 999,
+    courseInstructor: 'hitesh'
+}
+
+const { courseInstructor } = course // get courseInstructor
+console.log(courseInstructor);
+
+const { courseInstructor: instructor } = course // assign courseInstructor to instructor
+console.log(instructor);
+
+
+// JSON - JavaScript Object Notation
+/* 
+    1. can be object
+        {
+            "user" : "js in hindi",
+            "instructor" : "hitesh",
+            "price" : "free"
+        }
+
+    2. can be array of objects
+        [
+            {},
+            {}
+        ]
+*/
