@@ -39,5 +39,16 @@ const programmingLang = [
 ];
 
 programmingLang.forEach((item) => {
-  console.log(item.name);
+//   console.log(item.name);
 });
+
+// forEach does not return value
+const values = programmingLang.forEach( (item) => {
+    // console.log(item);
+    return item // forEach does not return value
+})
+
+// console.log(values); // undefined - does not return value
+
+
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
